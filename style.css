@@ -1,7 +1,7 @@
-:root{
-    
+:root {
+
     /* RED THEME */
-        /* --theme_color: #d73333;
+    /* --theme_color: #d73333;
         --theme_color__0: #d73333c2;
         --theme_color__00: #d733337a;
         --theme_color__D: #8f0707;
@@ -14,15 +14,15 @@
     --theme_color__00: #0087a97a;
     --theme_color__D: #006e89;
     --theme_color__DD: #03738faa;
-    
-    
+
+
     /* GREEN THEME */
     /* --theme_color: #00a903;
     --theme_color__0: #00a903c2;
     --theme_color__00: #00a9037a;
     --theme_color__D: #016703;
     --theme_color__DD: #004e01; */
-    
+
 }
 
 
@@ -53,93 +53,26 @@ body {
 
 div {
     background-color: brown;
-    ;
-
-}
-/* 
-header {
-    background-color: #292929;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10%;
-    font-size: 1em;
-} */
-
-/* LOGO */
-#logo {
-    background-color: transparent;
-    cursor: pointer;
-    width: 4rem;
-    
-}
-
-#logo img {
-    border-radius: 50%;
 
 }
 
-#logo-stuff {
+footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    object-fit: contain;
-}
+    height: 60px;
+    background-color: #0a0a0a;
 
-/* NAVBAR */
-/* .nav_buttons {
-    list-style: none;
-}
+    padding: 15px;
 
-.nav_buttons li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.nav_buttons li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_buttons li a:hover {
-    color: var(--theme_color);
-}
-
-.cta button {
-    background-color: var(--theme_color);
-    padding: 9px 25px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-.cta button:hover {
-    background-color: var(--theme_color__0);
-
-} */
-
-
-
-
-
-
-
-
-
-
-
-/* 
-#header-wrapper{
-    background-color: aquamarine;
-    padding: 5px 2rem;
-    height: 2rem;
-}
-#header{
-    height: 100%;
-    font-size: 1rem;
-    background-color: blue;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    font-size: 10px;
 }
-#header div{
-    vertical-align: middle;
-} */
+
+footer div{
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+}
