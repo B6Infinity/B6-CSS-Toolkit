@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,19 +14,21 @@
 </head>
 
 <body>
+    <!-- HEADER -->
+    <!-- CONTENT -->
+    <!-- FOOTER -->
+    <!-- ----------------------------------------- -->
+
+
+
 
     <!-- HEADER -->
     <header>
 
         <!-- LOGO -->
-        <!-- <div id="logo">
-                <div id="logo-stuff">
-                    HiThere
-                </div>
-            </div> -->
         <div id="logo">
             <img src="https://avatars.githubusercontent.com/u/58288273?v=4" alt="">
-            <div style="font-weight:800; background-color: transparent; margin: 0 7px;">
+            <div>
                 SampleCompany
             </div>
         </div>
@@ -32,40 +36,21 @@
 
         <!-- NAVBAR -->
         <nav>
-            <ul class="nav_buttons">
-                <li><a href="https://www.youtube.com">YouTube</a></li>
-                <li><a href="https://www.reddit.com">Reddit</a></li>
-                <li><a href="https://www.twitter.com">Twitter</a></li>
-            </ul>
+            <div class="nav_buttons">
+                <div class="nav_button"><a href="#">YouTube</a></div>
+                <div class="nav_button"><a href="#">Twitter</a></div>
+                <div class="nav_button"><a href="#">Reddit</a></div>
+                <div class="nav_button"><a href="#">Contact</a></div>
+
+            </div>
         </nav>
-        <a href="#" class="cta"><button>Contact</button></a>
 
 
 
     </header>
 
-    
     <!-- HEADER STYLE -->
     <style>
-        /* LOGO */
-        #logo {
-            background-color: transparent;
-            cursor: pointer;
-            width: 4rem;
-            margin-right: auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-        }
-
-        #logo img {
-            border-radius: 50%;
-            width: 100%;
-            object-fit: contain;
-        }
-
-
         /* HEADER */
         header {
             background-color: #292929;
@@ -77,10 +62,50 @@
             font-size: 1em;
         }
 
-        /* NAVBAR */
-        .nav_buttons {
-            list-style: none;
+
+
+        /* LOGO */
+        #logo {
+            background-color: transparent;
+            cursor: pointer;
+            width: 4rem;
+            margin-right: auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            user-select: none;
         }
+
+        #logo img {
+            border-radius: 50%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        #logo div {
+            font-weight: 800;
+            background-color: transparent;
+            margin: 0 7px;
+        }
+
+
+
+        /* NAVBAR */
+
+        .nav_buttons {
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .nav_button {
+            background-color: transparent;
+            margin: 5px;
+        }
+
+
+
+
 
         .nav_buttons li {
             display: inline-block;
@@ -107,33 +132,92 @@
         .cta button:hover {
             background-color: var(--theme_color__0);
         }
+
+
+
+        /* PHONES */
+        @media only screen and (max-width: 720px) {
+
+
+            /* HEADER */
+            #logo div {
+                display: none;
+            }
+
+            nav {
+                z-index: 1;
+                position: fixed;
+                inset: 0 0 0 30%;
+                background-color: steelblue;
+            }
+
+
+
+
+        }
     </style>
 
+
+
     <!-- <img style="width: 100%;" src="http://source.unsplash.com/1600x700/?man,suit" alt=""> -->
-
-
-
     <!-- http://source.unsplash.com/400x300/?man,nature -->
     <!-- https://dummyimage.com/1600x900/0f0f0f -->
 
 
 
 
+    <!-- CONTENT -->
+    <div id="content">
+
+    </div>
 
 
 
+    <!-- FOOTER -->
+    <footer>
+
+        <div>
+            Created by <a href="#">@broteen_das</a>
+        </div>
+
+        <hr>
+
+        <div style="text-align:left;">
+            Copyright © 2022 sample.idk [INVALID]
+        </div>
+
+    </footer>
+
+    <!-- FOOTER STYLE -->
+    <style>
+        /* FOOTER */
+        footer {
+            width: 100%;
+            background-color: #0a0a0a;
+
+            /* Placing (Include when page does not scroll)*/
+            position: absolute;
+            bottom: 0%;
+            /*  */
+
+
+            /* Props */
+            padding: 15px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            font-size: 10px;
+        }
+
+        footer div {
+            width: 100%;
+            text-align: left;
+            padding: 10px;
+            background-color: transparent;
+        }
+    </style>
 
 </body>
-<footer style="margin-bottom: 0%;">
-    
-    <div>
-
-    </div>
-    <hr>
-    <div style="text-align:left;">
-        Copyright © 2022 sample.idk [INVALID]
-    </div>
-    
-</footer>
 
 </html>
