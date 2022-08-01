@@ -14,26 +14,15 @@
 <body>
 
     <div id="content-bar">
-        Hi
-    </div>
-    <div id="display">
-
-        HELlo
-
-
-
         
-
-
-
-
-
-
-
-
-
     </div>
-    <style>
+
+
+    <div id="display">
+        <!-- HTML gets injected here -->
+    </div>
+    <style id="display_style">
+
     </style>
 
 </body>
@@ -228,6 +217,17 @@
 
 
     function displayElement(elementID) {
+        document.getElementById('display').innerHTML = ELEMENT_DIRECTORY[elementID].html;
+        document.getElementById('display_style').innerHTML = ELEMENT_DIRECTORY[elementID].css;
+    }
+
+
+
+    // Init JS
+    let contentBar = document.getElementById('content-bar');
+
+    for(let element in ELEMENT_DIRECTORY){
+        contentBar.innerHTML += `<div class="content-button" onclick="displayElement('${element}')">${element}</div>`;
 
     }
 

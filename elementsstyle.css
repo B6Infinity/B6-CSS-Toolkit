@@ -62,10 +62,20 @@ div {
 
 #content-bar{
     height: 100%;
+    background-color: rgba(128, 128, 128, 0.234);
     width: 20%;
 }
 #display{
     height: 100%;
     width: 80%;
     background-color: transparent;
+}
+
+.content-button{
+    padding: 1rem;
+    font-weight: 400;
+    background-color: #474747;
+}
+.content-button:hover{
+    background-color: #47474786;
 }
