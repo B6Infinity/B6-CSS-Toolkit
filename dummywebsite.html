@@ -37,10 +37,10 @@
         <!-- NAVBAR -->
         <nav>
             <div class="nav_buttons">
-                <div class="nav_button"><a href="#">YouTube</a></div>
-                <div class="nav_button"><a href="#">Twitter</a></div>
-                <div class="nav_button"><a href="#">Reddit</a></div>
+                <div class="nav_button"><a href="#">Home</a></div>
+                <div class="nav_button"><a href="#">About</a></div>
                 <div class="nav_button"><a href="#">Contact</a></div>
+                <div class="nav_button"><a href="#">Link4</a></div>
 
             </div>
         </nav>
@@ -100,23 +100,24 @@
         
         .nav_button {
             background-color: transparent;
-            margin: 5px;
+            margin: 10px;
+            /* padding: 8px 10px; */
         }
 
 
 
 
 
-        .nav_buttons li {
+        .nav_button {
             display: inline-block;
             padding: 0 20px;
         }
 
-        .nav_buttons li a {
+        .nav_button a {
             transition: all 0.3s ease 0s;
         }
 
-        .nav_buttons li a:hover {
+        .nav_button a:hover {
             color: var(--theme_color);
         }
 
@@ -148,7 +149,16 @@
                 z-index: 1;
                 position: fixed;
                 inset: 0 0 0 30%;
-                background-color: steelblue;
+                background-color: hsl(0 0% 100% / 0.1);
+                backdrop-filter: blur(1rem);
+            }
+            .nav_buttons{
+                flex-direction: column;
+                padding: min(20vh, 8rem) 2rem;
+            }
+            .nav_button{
+                padding: 0.8rem;
+                font-size: 1.2rem;
             }
 
 
