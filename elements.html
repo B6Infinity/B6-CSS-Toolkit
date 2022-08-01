@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B6 CSS Toolkit</title>
+
+    <link rel="stylesheet" href="elementsstyle.css">
+
+</head>
+
+<body>
+
+    <div id="content-bar">
+        Hi
+    </div>
+    <div id="display">
+
+        HELlo
+
+
+
+        
+
+
+
+
+
+
+
+
+
+    </div>
+    <style>
+    </style>
+
+</body>
+
+
+<script>
+
+    let ELEMENT_DIRECTORY = {
+        "HEADER_1": {
+            "html": `
+            <header>
+
+            <!-- LOGO -->
+            <!-- <div id="logo">
+                    <div id="logo-stuff">
+                        HiThere
+                    </div>
+                </div> -->
+            <div id="logo">
+                <img id="logo-stuff" src="https://avatars.githubusercontent.com/u/58288273?v=4" alt="">
+            </div>
+
+
+            <!-- NAVBAR -->
+            <nav>
+                <ul class="nav_buttons">
+                    <li><a href="https://www.youtube.com">YouTube</a></li>
+                    <li><a href="https://www.reddit.com">Reddit</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta"><button>Contact</button></a>
+
+            </header>`,
+            "css": `
+
+            /* HEADER */
+            header {
+                background-color: #292929;
+                font-weight: 500;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 10%;
+                font-size: 1em;
+            }
+
+            /* NAVBAR */
+            .nav_buttons {
+                list-style: none;
+            }
+
+            .nav_buttons li {
+                display: inline-block;
+                padding: 0 20px;
+            }
+
+            .nav_buttons li a {
+                transition: all 0.3s ease 0s;
+            }
+
+            .nav_buttons li a:hover {
+                color: var(--theme_color);
+            }
+
+            .cta button {
+                background-color: var(--theme_color);
+                padding: 9px 25px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            .cta button:hover {
+                background-color: var(--theme_color__0);
+
+            }
+            
+                        
+            /* LOGO */
+            #logo {
+                background-color: transparent;
+                cursor: pointer;
+                width: 4rem;
+                
+            }
+
+            #logo img {
+                border-radius: 50%;
+
+            }
+
+            #logo-stuff {
+                width: 100%;
+                object-fit: contain;
+            }
+            `
+        },
+        "HEADER_2": {
+            "html": `
+            <header>
+
+                <!-- LOGO -->
+                <!-- <div id="logo">
+                        <div id="logo-stuff">
+                            HiThere
+                        </div>
+                    </div> -->
+                <div id="logo">
+                    <img id="logo-stuff" src="https://avatars.githubusercontent.com/u/58288273?v=4" alt="">
+                </div>
+
+
+                <!-- NAVBAR -->
+                <nav>
+                    <ul class="nav_buttons">
+                        <li><a href="https://www.youtube.com">YouTube</a></li>
+                        <li><a href="https://www.reddit.com">Reddit</a></li>
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="cta"><button>Contact</button></a>
+
+            </header>
+            `,
+            "css": `
+
+            /* HEADER */
+            header {
+                background-color: #292929;
+                font-weight: 500;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 10px 10%;
+                font-size: 1em;
+            }
+
+            /* NAVBAR */
+            .nav_buttons {
+                list-style: none;
+            }
+
+            .nav_buttons li {
+                display: inline-block;
+                padding: 0 20px;
+            }
+
+            .nav_buttons li a {
+                transition: all 0.3s ease 0s;
+            }
+
+            .nav_buttons li a:hover {
+                color: var(--theme_color);
+            }
+
+            .cta button {
+                background-color: var(--theme_color);
+                padding: 9px 25px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+
+            .cta button:hover {
+                background-color: var(--theme_color__0);
+
+            }
+            
+            /* LOGO */
+            #logo {
+                background-color: transparent;
+                cursor: pointer;
+                width: 4rem;
+                
+            }
+
+            #logo img {
+                border-radius: 50%;
+
+            }
+
+            #logo-stuff {
+                width: 100%;
+                object-fit: contain;
+            }
+            `
+        }
+    };
+
+
+    function displayElement(elementID) {
+
+    }
+
+
+</script>
+
+</html>
