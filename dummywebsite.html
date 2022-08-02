@@ -35,7 +35,8 @@
 
 
         <!-- NAVBAR -->
-        <nav>
+        <button id="mobile-nav-toggle" onclick="toggleNavMenu()" menu_visibility="false"></button>
+        <nav id="header_nav" visibility="false">
             <div class="nav_buttons">
                 <div class="nav_button"><a href="#">Home</a></div>
                 <div class="nav_button"><a href="#">About</a></div>
@@ -97,18 +98,10 @@
             display: flex;
             flex-direction: row;
         }
-        
+
         .nav_button {
             background-color: transparent;
             margin: 10px;
-            /* padding: 8px 10px; */
-        }
-
-
-
-
-
-        .nav_button {
             display: inline-block;
             padding: 0 20px;
         }
@@ -121,19 +114,9 @@
             color: var(--theme_color);
         }
 
-        .cta button {
-            background-color: var(--theme_color);
-            padding: 9px 25px;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease 0s;
+        #mobile-nav-toggle {
+            display: none;
         }
-
-        .cta button:hover {
-            background-color: var(--theme_color__0);
-        }
-
 
 
         /* PHONES */
@@ -146,27 +129,71 @@
             }
 
             nav {
-                z-index: 1;
+                z-index: 1000;
                 position: fixed;
                 inset: 0 0 0 30%;
-                background-color: hsl(0 0% 100% / 0.1);
-                backdrop-filter: blur(1rem);
+                background-color: rgba(187, 187, 187, 0.209);
+                
+                transform: translateX(100%);
+                transition: 0.2s;
             }
-            .nav_buttons{
+            nav[visibility="true"]{
+                transform: translateX(0%);
+            }
+
+            .nav_buttons {
                 flex-direction: column;
                 padding: min(20vh, 8rem) 2rem;
             }
-            .nav_button{
-                padding: 0.8rem;
-                font-size: 1.2rem;
+
+            .nav_button {
+                padding: 2rem;
+                font-size: 1rem;
+                font-weight: 500;
             }
 
+            @supports (backdrop-filter: blur(1rem)) {
+                nav {
+                    background-color: hsl(0 0% 100% / 0.1);
+                    backdrop-filter: blur(1rem);
+                }
+            }
 
+            #mobile-nav-toggle {
+                display: block;
+                background: url('/Assets/hamburger_menu.png');
+                width: 1.8rem;
+                aspect-ratio: 1;
+                background-repeat: no-repeat;
+                border: 0;
+
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                z-index: 9999;
+            }
+            #mobile-nav-toggle[menu_visibility="true"]{
+                background: url('/Assets/multiply_icon.png');
+            }
 
 
         }
     </style>
 
+    <script>
+        let navMenu = document.querySelector('nav');
+        let navButton = document.getElementById('mobile-nav-toggle');
+
+        function toggleNavMenu() {
+            if (navMenu.getAttribute("visibility") == "false") {
+                navMenu.setAttribute("visibility", "true");
+                navButton.setAttribute('menu_visibility', "true");
+            } else {
+                navMenu.setAttribute("visibility", "false");
+                navButton.setAttribute('menu_visibility', "false");
+            }
+        }
+    </script>
 
 
     <!-- <img style="width: 100%;" src="http://source.unsplash.com/1600x700/?man,suit" alt=""> -->
