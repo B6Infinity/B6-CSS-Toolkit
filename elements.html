@@ -14,6 +14,10 @@
 <body>
 
     <div id="content-bar">
+        <div id="content_bar_head">
+            <button onclick="copyToClipboard()">Copy</button>
+            <button onclick="toggleDisplay()">Toggle View</button>
+        </div>
 
     </div>
 
@@ -26,9 +30,6 @@
         /* STYLE gets injected here */
     </style>
 
-    <script id="display_script">
-        // JS gets inserted here
-    </script>
 
 
 </body>
@@ -379,7 +380,7 @@
 
             
             `,
-            "js":`
+            "js": `
                 // NAVBAR SCRIPT
                 let navMenu = document.querySelector('nav');
                 let navButton = document.getElementById('mobile-nav-toggle');
@@ -395,25 +396,112 @@
                     }
                 }            
             `,
+        },
+        "LANDING_PAGE_BANNER(R)": {
+            "html": `
+                <!-- LANDING BANNER -->
+                <div class="landing_banner">
+
+                    <img src="http://source.unsplash.com/800x300/?man,camera" alt="">
+                    <div id="stuff_container">
+                        <div class="heading">
+                            Click the Moment!
+                        </div>
+                        <div style="background-color: transparent; font-size: 10px;">
+                            Lorem, ipsum dolor.
+                        </div>
+                    </div>
+
+                </div>
+            `,
+            "css": `
+            .landing_banner {
+                /* width: 100%;
+                height: auto; */
+
+                background-color: var(--theme_colorDD);
+                position: relative;
+            }
+
+            .landing_banner img {
+                width: 100%;
+                height: auto;
+                opacity: 0.6;
+                transition: 0.2s;
+            }
+
+            .landing_banner img:hover {
+                opacity: 0.4;
+            }
+
+            .landing_banner #stuff_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                /* PLACING */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                background-color: transparent;
+            }
+            `
+        },
+        "SCROLLBAR": {
+            "html": `
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis libero atque, consectetur perferendis, qui laudantium placeat dignissimos perspiciatis expedita doloremque autem repellendus, facere vel! Quae rem ut in incidunt ipsam odio ullam, sunt perspiciatis. Molestias perspiciatis enim, accusamus nam hic quod ut quae sint. Ipsam placeat magni reprehenderit nulla consequatur? Magni, fugiat? Similique dolore tempore molestias ipsum quas sit ut et quod ipsam, veniam, deserunt illum fugit, hic rem odio ex vitae fuga natus laboriosam. Facere veritatis sit nesciunt cumque. Ducimus fugit deserunt at beatae commodi rerum magnam laborum excepturi molestiae quisquam dolore tempora, error quidem, accusamus sed nobis quaerat earum voluptas vero, esse ex eligendi. Rerum, illo. Quibusdam magnam quae, impedit rerum possimus neque facere illo unde culpa nemo accusamus voluptatem. Libero praesentium eos sint placeat voluptatibus ad omnis, odit a dignissimos, ipsa, veritatis qui corrupti consectetur explicabo eligendi voluptates itaque similique. Facilis delectus commodi rem incidunt rerum. Quasi expedita ducimus ipsa sint voluptatibus nisi cum ratione, ipsum esse totam quaerat facilis natus eligendi consequatur, mollitia dicta vero nam? Nihil perspiciatis illo quis, nostrum voluptatum beatae? Asperiores officiis ut numquam alias dolor omnis culpa pariatur quos inventore? Repudiandae veniam illo est quis labore inventore deleniti, earum ipsam eum sequi illum fuga eligendi impedit saepe velit incidunt ducimus quia obcaecati suscipit corrupti, ad blanditiis quos ex rerum! Voluptates excepturi beatae a. Aperiam hic rerum, aliquid omnis adipisci possimus commodi atque nobis, repellendus tenetur qui soluta voluptatibus. Ut veniam, sint expedita libero harum atque nobis commodi cum doloremque amet dolorum esse non at modi labore aliquam animi eveniet natus illum aliquid? Accusantium sapiente enim suscipit voluptate reiciendis odit exercitationem sequi dolore aut! Earum quia aspernatur obcaecati nam deleniti, ducimus quas, ratione nulla ullam natus ipsum illo labore est, dolorem quos expedita iusto repudiandae veritatis autem aliquam officia hic unde repellendus? Ad assumenda quasi et corporis. Modi voluptatibus nobis a aut, ipsum voluptate magnam, voluptas aspernatur ullam accusamus ab expedita recusandae quo sunt molestias? Explicabo commodi fugiat modi similique ipsa corrupti voluptatum ullam aspernatur delectus esse veniam laborum quos, odit totam dolorem, asperiores molestias dicta minima. Rerum cupiditate eveniet error architecto blanditiis pariatur aliquam minus, magnam repellat, omnis harum itaque dolores quo ullam! Veritatis reiciendis voluptatum fugit. Nisi, distinctio. Unde dolore officia aperiam dolor a, commodi ipsa illum? Modi necessitatibus facere eius perferendis quis culpa amet provident qui laborum explicabo quasi nisi deserunt officia recusandae, minima quaerat dolorum blanditiis molestias corrupti libero repellendus voluptas veritatis. Facilis, vel fugit molestiae consequuntur molestias omnis aliquid illum sunt mollitia dicta aspernatur, quisquam quia eum, illo ipsam quo explicabo odio asperiores. Dolore soluta voluptatibus aspernatur nobis voluptatem, sit vel praesentium aperiam corporis voluptas fugiat dolor ex in non nesciunt maxime sapiente enim ullam. Alias soluta vitae neque eum a autem, fugiat blanditiis similique iure deserunt quam, quasi ipsam ex! Voluptatibus nobis ratione cum fugiat quidem sunt est id! Quos eligendi consequuntur ab molestias vero sunt, et assumenda temporibus tempora fuga veritatis voluptatem cupiditate laudantium quaerat perspiciatis suscipit. Totam pariatur quibusdam doloribus vel aut, in obcaecati maxime.
+            `,
+            "css":`
+
+            /* SCROLLBAR */
+            ::-webkit-scrollbar {
+                width: 5px;
+            }
+            
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #323232;
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+            
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            `
         }
+
+
+
     };
 
 
     function displayElement(elementID) {
-        document.getElementById('display').innerHTML = ELEMENT_DIRECTORY[elementID].html;
-        document.getElementById('display_style').innerHTML = ELEMENT_DIRECTORY[elementID].css;
-        
+        document.getElementById('display').innerHTML = ELEMENT_DIRECTORY[elementID].html; // INJECT HTML
+        document.getElementById('display_style').innerHTML = ELEMENT_DIRECTORY[elementID].css; // INJECT CSS
 
-        
+
+        // INJECT SCRIPT
         let scripot = document.createElement("script");
         scripot.id = "display_script";
         scripot.text = ELEMENT_DIRECTORY[elementID].js;
         document.body.appendChild(scripot);
-        
-        
+
+
 
     }
 
+    function toggleDisplay() {
+        let display = document.getElementById('display');
+
+    }
 
 
     // Init JS

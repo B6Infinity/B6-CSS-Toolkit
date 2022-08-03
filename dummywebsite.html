@@ -211,6 +211,141 @@
     <!-- CONTENT -->
     <div id="content">
 
+        <!-- LANDING BANNER -->
+        <div class="landing_banner">
+
+            <img src="http://source.unsplash.com/800x300/?man,camera" alt="">
+            <div id="stuff_container">
+                <div class="heading">
+                    Click the Moment!
+                </div>
+                <div style="background-color: transparent; font-size: 10px;">
+                    Lorem, ipsum dolor.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- LANDING BANNER STYLE -->
+        <style>
+            .landing_banner {
+                /* width: 100%;
+                height: auto; */
+
+                background-color: var(--theme_colorDD);
+                position: relative;
+            }
+
+            .landing_banner img {
+                width: 100%;
+                height: auto;
+                opacity: 0.8;
+                transition: 0.2s;
+            }
+
+            .landing_banner img:hover {
+                opacity: 0.4;
+            }
+
+            .landing_banner #stuff_container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+
+                /* PLACING */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                background-color: transparent;
+            }
+        </style>
+        <!--  -->
+
+
+        <!-- CONTENT CARDS -->
+        <div class="content-cards-contanier">
+            <h1>Lorem.</h1>
+            <div class="content-cards">
+
+                <div class="content-card">
+                    <img src="https://dummyimage.com/200x100/555555
+                    " alt="">
+                    <div id="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laudantium.
+                    </div>
+                    <button>Learn More</button>
+                </div>
+                <div class="content-card">
+                    <img src="https://dummyimage.com/200x100/999999
+                    " alt="">
+                    <div id="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laudantium.
+                    </div>
+                    <button>Learn More</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- CONTENT CARDS STYLE -->
+        <style>
+            .content-cards-contanier {
+                background-color: transparent;
+                margin: 3rem 2rem;
+            }
+
+            .content-cards {
+                /* background-color: rgba(0, 255, 255, 0.764); */
+                background-color: transparent;
+                padding: 5px;
+                width: 100%;
+                /* display: flex;
+                flex-direction: row; */
+                height: 400px;
+
+            }
+
+            .content-card {
+                display: inline-block;
+                background-color: rgb(26, 26, 26);
+                margin: 10px;
+                width: 200px;
+                height: 300px;
+                border-radius: 3px;
+                position: relative;
+                transition: 0.2s;
+            }
+            .content-card img{
+                border-radius: 3px 3px 0 0;
+            }
+            .content-card button{
+                margin: 0 10px;
+                padding: 0.5em;
+                background-color: var(--theme_color__00);
+                border: none;
+                border-radius: 4px;
+                transition: 0.2s;
+            }
+            .content-card:hover{
+                transform: translateY(-2%);
+
+            }
+            .content-card button:hover{
+                background-color: var(--theme_color);
+            }
+
+            .content-card #text {
+                background-color: transparent;
+                margin: 10px;
+                font-size: 18px;
+
+            }
+        </style>
+
+
+
     </div>
 
 
@@ -238,8 +373,8 @@
             background-color: #0a0a0a;
 
             /* Placing (Include when page does not scroll)*/
-            position: absolute;
-            bottom: 0%;
+            /* position: absolute;
+            bottom: 0%; */
             /*  */
 
 

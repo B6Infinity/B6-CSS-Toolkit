@@ -81,3 +81,28 @@ div {
 .content-button:hover{
     background-color: #47474786;
 }
+
+#content_bar_head{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#content_bar_head button{
+    padding: 5px;
+    margin: 5px 0;
+    
+    background-color: #0087a9;
+    border-radius: 5px;
+}
+
+
+/* USABLE */
+.heading{
+    background-color: transparent;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 2rem;
+
+    text-shadow: 1px 1px 3px black;
+}
